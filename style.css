@@ -4,6 +4,17 @@
     --text: #333;
     --white: #ffffff;
     --gray: #f4f4f4;
+    --bg: #ffffff;
+    --card-bg: #f4f4f4;
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+    --bg: #121212;
+    --text: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --dark: #000000;
+    --gray: #333;
 }
 
 * {
@@ -16,7 +27,8 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text);
-    background: var(--white);
+    background: var(--bg);
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
 .container {
@@ -42,17 +54,10 @@ nav {
     z-index: 1000;
 }
 
-.nav-logo {
-    height: 40px; 
-    width: 40px; 
-    border-radius: 50%; 
-    object-fit: cover; 
-    border: 2px solid var(--white); 
-}
-
 .nav-links {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 .nav-links li {
@@ -67,6 +72,22 @@ nav {
 
 .nav-links a:hover {
     color: var(--primary);
+}
+
+/* Theme Button Style */
+.theme-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    filter: brightness(1.2);
 }
 
 .hamburger {
@@ -92,48 +113,17 @@ nav {
     text-align: center;
 }
 
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .profile-container {
-    position: relative;
-    width: 180px;
-    height: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 20px 0;
 }
 
 .hero-logo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 5px solid var(--white);
-    object-fit: contain;
-    object-position: center center;
-    background: var(--white);
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    margin: 0;
-}
-
-.hero-profile-img {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 5px solid var(--white);
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+    background: white;
 }
 
 .hero h1 span {
@@ -174,6 +164,7 @@ nav {
     background: #ddd;
     height: 10px;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 .progress {
@@ -184,15 +175,20 @@ nav {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
 .project-card {
-    background: var(--gray);
+    background: var(--card-bg);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
 .project-card img {
@@ -209,9 +205,11 @@ nav {
 
 #contact-form input, #contact-form textarea {
     margin-bottom: 15px;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background: var(--bg);
+    color: var(--text);
 }
 
 footer {
@@ -222,7 +220,6 @@ footer {
 }
 
 @media (max-width: 992px) {
-    .project-grid { grid-template-columns: repeat(2, 1fr); }
     .about-flex { flex-direction: column; text-align: center; }
 }
 
@@ -239,4 +236,5 @@ footer {
         padding: 20px;
     }
     .nav-links.active { display: flex; }
+    .nav-links li { margin: 10px 0; }
 }
