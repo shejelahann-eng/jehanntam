@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jehann Tamondong | Online Portfolio</title>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jehann Tamondong | Online Portfolio</title>
+    
+    <meta name="description" content="Portfolio of Jehann Tamondong, an aspiring Web Developer from Burgos, Pangasinan.">
+    <meta name="keywords" content="Jehann Tamondong, Web Developer, Pangasinan, Portfolio, Frontend Developer">
+    <meta name="author" content="Jehann Tamondong">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Jehann Tamondong</span></h1>
+                <div class="profile-container">
+                    <img src="images/logo.png" alt="Jehann Logo" class="hero-logo">
+                </div>
+                <p>Aspiring Web Developer | Gamer | Basketball Enthusiast</p>
+                <a href="#projects" class="cta-btn">View My Work</a>
+            </div>
+        </section>
+
+        <section id="about" class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-flex">
+                <img src="images/logo.png" alt="Jehann Tamondong" class="profile-img">
+                <div class="about-text">
+                    <p>I am a 26-year-old developer from Poblacion Burgos, Pangasinan. I am passionate about building clean and functional websites using modern web technologies.</p>
+                    <p>Beyond coding, I am an active basketball player and a dedicated gamer. These hobbies have taught me the importance of teamwork, strategy, and perseverance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>HTML5</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-card">
+                    <h3>CSS3</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                </div>
+            </div>
+            <div class="soft-skills">
+                <h3>Soft Skills</h3>
+                <p>Teamwork • Strategic Thinking • Problem Solving • Communication</p>
+            </div>
+        </section>
+
+        <section id="projects" class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="images/project1.png" alt="Project 1">
+                    <h3>Project One</h3>
+                    <p>A semantic HTML/CSS webpage layout.</p>
+                    <a href="#" class="btn-link">View Repo</a>
+                </div>
+                <div class="project-card">
+                    <img src="images/project2.png" alt="Project 2">
+                    <h3>Project Two</h3>
+                    <p>Responsive design using CSS Flexbox/Grid.</p>
+                    <a href="#" class="btn-link">View Repo</a>
+                </div>
+                <div class="project-card">
+                    <img src="images/project3.png" alt="Project 3">
+                    <h3>Project Three</h3>
+                    <p>Interactive features using Vanilla JavaScript.</p>
+                    <a href="#" class="btn-link">View Repo</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="container">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-box">
+                <p>Interested in working together? View my detailed qualifications below.</p>
+                <a href="assets/resume.pdf" class="cta-btn" download>Download Resume (PDF)</a>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="cta-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025-2026 Jehann Tamondong. Poblacion Burgos, Pangasinan.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
